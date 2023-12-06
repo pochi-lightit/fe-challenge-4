@@ -1,24 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/fe-challenge-4/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+    />
     <title>Login</title>
-</head>
-<body>
-    <div>
-        <img src="" alt="">
-        <div class="form">
-            <h1>Sign up</h1>
-            <p>If you already have an account registered</p>
-            <p>You can 
-                <a href="/">Login here!</a>
-            </p>
+  </head>
+  <body>
+    <div class="main-container">
+      <img
+        src="/fe-challenge-4/media/images/3644996.png"
+        alt="login-image"
+        class="desktop-image"
+      />
+      <div class="register-box">
+        <h1>Sign up</h1>
+        <div>
+          <p>If you already have an account registered</p>
+          <p>
+            <span>You can</span>
+            <a href="/">Login here!</a>
+          </p>
         </div>
+
+        <form action="/" class="form">
+          <div class="field">
+            <label for="email" class="register-label">Email</label>
+            <div>
+              <div class="placeholder">
+                <img
+                  src="/fe-challenge-4/media/icons/message.png"
+                  alt="email-icon"
+                />
+                <input type="email" placeholder="Enter your email address" />
+              </div>
+              <hr />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="username" class="register-label">Username</label>
+            <div>
+              <div class="placeholder">
+                <img
+                  src="/fe-challenge-4/media/icons/user.png"
+                  alt="user-icon"
+                  class="register-icon"
+                />
+                <input type="text" placeholder="Enter your User name" />
+              </div>
+              <hr />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="password" class="register-label">Password</label>
+            <div class="password-field">
+              <div class="placeholder">
+                <div class="password-placeholder">
+                  <img
+                    src="/fe-challenge-4/media/icons/padlock.png"
+                    alt="lock-icon"
+                  />
+                  <input type="password" placeholder="Enter your Password" />
+                </div>
+                <img
+                  src="/fe-challenge-4/media/icons/invisible.png"
+                  alt="crossed-eye-icon"
+                />
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div class="field">
+            <label for="password" class="register-label"
+              >Confirm Password</label
+            >
+            <div class="password-field">
+              <div class="placeholder">
+                <div class="password-placeholder">
+                  <img
+                    src="/fe-challenge-4/media/icons/padlock.png"
+                    alt="lock-icon"
+                  />
+                  <input type="password" placeholder="Confirm your Password" />
+                </div>
+                <img
+                  src="/fe-challenge-4/media/icons/invisible.png"
+                  alt="crossed-eye-icon"
+                />
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <input type="submit" class="submit-button" value="Register"></input>
+        </form>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>

@@ -1,0 +1,136 @@
+:root {
+  --highlight: #ef4444;
+  --text-black: #3f4559;
+  --text-label: #5a5f70;
+  --text-input: #5a5f70;
+  --white: #fcfcfc;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 30px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-black);
+  font-weight: 400;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.register-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  text-align: left;
+  width: 100%;
+  max-height: 666px;
+}
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: var(--lg);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: var(--text-label);
+  font-size: var(--md);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.register-label {
+  font-weight: 600;
+  font-size: var(--sm);
+}
+
+input {
+  border: none;
+  width: 180px;
+}
+
+input::placeholder {
+  font-family: "Manrope", sans-serif;
+  font-size: var(--md);
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-items: center;
+}
+
+.desktop-image {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .desktop-image {
+    display: none;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.password-placeholder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.register-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.submit-button {
+  background-color: var(--highlight);
+  color: var(--white);
+  height: 53px;
+  width: 90%;
+  align-self: center;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 18px;
+}
+
+.submit-button:hover {
+  background-color: var(--white);
+  color: var(--highlight);
+  border: var(--highlight);
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
