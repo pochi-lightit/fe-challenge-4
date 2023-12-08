@@ -2,7 +2,6 @@
   --highlight: #ef4444;
   --text-black: #3f4559;
   --text-label: #5a5f70;
-  --text-input: #5a5f70;
   --white: #fcfcfc;
   --sm: 14px;
   --md: 16px;
@@ -18,19 +17,21 @@ body {
 }
 
 .main-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(2, 1fr);
   align-items: center;
   gap: 12px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .register-box {
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 30px;
   text-align: left;
-  width: 100%;
   max-height: 666px;
 }
 
@@ -70,28 +71,35 @@ input::placeholder {
   font-size: var(--md);
 }
 
-.placeholder {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-items: center;
-}
-
 .desktop-image {
+  grid-column: span 3;
   width: 100%;
+  max-width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1021px) {
   .desktop-image {
     display: none;
+  }
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .register-box {
+    max-width: 450px;
   }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 48px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .field {
@@ -103,27 +111,63 @@ input::placeholder {
   width: 100%;
 }
 
-.password-placeholder {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .register-icon {
   width: 17px;
   height: 17px;
 }
 
+.toggle {
+  cursor: pointer;
+}
+
+.input-box,
+.password-field {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid var(--text-label);
+  transition: border-bottom-color 0.3s ease;
+  height: 28px;
+  gap: 6px;
+}
+
+.password-field {
+  justify-content: space-between;
+}
+
+.input-box:focus-within,
+.password-field:focus-within {
+  border-bottom-color: var(--highlight);
+}
+
+.field input {
+  height: 17px;
+  border: none;
+  border-radius: 3px;
+  width: 250px;
+  appearance: none;
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: no-wrap;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  color: var(--text-black);
+}
+
+.field input:focus {
+  outline: none;
+}
+
 .submit-button {
   background-color: var(--highlight);
   color: var(--white);
+  border: none;
   height: 53px;
   width: 90%;
   align-self: center;
   border-radius: 50px;
   font-size: 17px;
   font-weight: 500;
-  margin-top: 18px;
 }
 
 .submit-button:hover {

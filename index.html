@@ -32,78 +32,90 @@
         </div>
 
         <form action="/" class="form">
-          <div class="field">
-            <label for="email" class="register-label">Email</label>
-            <div>
-              <div class="placeholder">
+          <div class="fields">
+            <div class="field">
+              <label for="email" class="register-label">Email</label>
+              <div class="input-box">
                 <img
                   src="/fe-challenge-4/media/icons/message.png"
                   alt="email-icon"
+                  class="register-icon"
                 />
-                <input type="email" placeholder="Enter your email address" />
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                />
               </div>
-              <hr />
             </div>
-          </div>
 
-          <div class="field">
-            <label for="username" class="register-label">Username</label>
-            <div>
-              <div class="placeholder">
+            <div class="field">
+              <label for="username" class="register-label">Username</label>
+              <div class="input-box">
                 <img
                   src="/fe-challenge-4/media/icons/user.png"
                   alt="user-icon"
                   class="register-icon"
                 />
-                <input type="text" placeholder="Enter your User name" />
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Enter your User name"
+                />
               </div>
-              <hr />
             </div>
-          </div>
 
-          <div class="field">
-            <label for="password" class="register-label">Password</label>
-            <div class="password-field">
-              <div class="placeholder">
-                <div class="password-placeholder">
+            <div class="field">
+              <label for="password" class="register-label">Password</label>
+              <div class="password-field">
+                <div class="input-box">
                   <img
                     src="/fe-challenge-4/media/icons/padlock.png"
                     alt="lock-icon"
+                    class="register-icon"
                   />
-                  <input type="password" placeholder="Enter your Password" />
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your Password"
+                  />
                 </div>
                 <img
                   src="/fe-challenge-4/media/icons/invisible.png"
                   alt="crossed-eye-icon"
+                  class="register-icon toggle"
                 />
               </div>
             </div>
-            <hr />
-          </div>
 
-          <div class="field">
-            <label for="password" class="register-label"
-              >Confirm Password</label
-            >
-            <div class="password-field">
-              <div class="placeholder">
-                <div class="password-placeholder">
+            <div class="field">
+              <label for="repeat-password" class="register-label"
+                >Confirm Password</label
+              >
+              <div class="password-field">
+                <div class="input-box">
                   <img
                     src="/fe-challenge-4/media/icons/padlock.png"
                     alt="lock-icon"
+                    class="register-icon"
                   />
-                  <input type="password" placeholder="Confirm your Password" />
+                  <input
+                    type="password"
+                    id="repeat-password"
+                    placeholder="Confirm your Password"
+                  />
                 </div>
                 <img
                   src="/fe-challenge-4/media/icons/invisible.png"
                   alt="crossed-eye-icon"
+                  class="register-icon toggle"
+                  title="Show password"
                 />
               </div>
             </div>
-            <hr />
           </div>
 
-          <input type="submit" class="submit-button" value="Register"></input>
+          <button class="submit-button">Register</button>
         </form>
       </div>
     </div>
