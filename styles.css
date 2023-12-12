@@ -87,6 +87,7 @@ input::placeholder {
   .main-container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    min-height: 100vh;
   }
   .register-box {
     max-width: 450px;
