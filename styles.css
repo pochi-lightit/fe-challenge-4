@@ -1,0 +1,184 @@
+:root {
+  --highlight: #ef4444;
+  --text-black: #3f4559;
+  --text-label: #5a5f70;
+  --white: #fcfcfc;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 30px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-black);
+  font-weight: 400;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(2, 1fr);
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.register-box {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  text-align: left;
+  max-height: 666px;
+}
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: var(--lg);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: var(--text-label);
+  font-size: var(--md);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.register-label {
+  font-weight: 600;
+  font-size: var(--sm);
+}
+
+input {
+  border: none;
+  width: 180px;
+}
+
+input::placeholder {
+  font-family: "Manrope", sans-serif;
+  font-size: var(--md);
+}
+
+.desktop-image {
+  grid-column: span 3;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+@media (max-width: 1021px) {
+  .desktop-image {
+    display: none;
+  }
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    min-height: 100vh;
+  }
+  .register-box {
+    max-width: 450px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.register-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.input-box,
+.password-field {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid var(--text-label);
+  transition: border-bottom-color 0.3s ease;
+  height: 28px;
+  gap: 6px;
+}
+
+.password-field {
+  justify-content: space-between;
+}
+
+.input-box:focus-within,
+.password-field:focus-within {
+  border-bottom-color: var(--highlight);
+}
+
+.field input {
+  height: 17px;
+  border: none;
+  border-radius: 3px;
+  width: 250px;
+  appearance: none;
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: no-wrap;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  color: var(--text-black);
+}
+
+.field input:focus {
+  outline: none;
+}
+
+.submit-button {
+  background-color: var(--highlight);
+  color: var(--white);
+  border: none;
+  height: 53px;
+  width: 90%;
+  align-self: center;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.submit-button:hover {
+  background-color: var(--white);
+  color: var(--highlight);
+  border: var(--highlight);
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
